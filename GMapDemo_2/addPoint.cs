@@ -21,6 +21,7 @@ namespace GMapDemo_2
         {
             text = placeText.Text;
             this.Hide();
+
         }
     }
 }

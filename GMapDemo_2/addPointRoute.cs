@@ -16,11 +16,7 @@ namespace GMapDemo_2
         public addPointRoute()
         {
             InitializeComponent();
-            var dict = MapForm.dictPlace;
-            if (dict.Keys.Count > 0)
-            {
-                this.Close();
-            }
+            
         }
 
         private void addPointRoute_Load(object sender, EventArgs e)
@@ -49,7 +45,7 @@ namespace GMapDemo_2
 
         private void start_Click(object sender, EventArgs e)
         {
-            string startPointText = comboBox1.Text.ToString();
+            string startPointText = comboBox1.SelectedValue.ToString();
             startPoint.Text = startPointText;
             start1 = startPointText;
             start_show.Text = MapForm.dictPlace[startPointText];
@@ -66,7 +62,7 @@ namespace GMapDemo_2
 
         private void start2_Click(object sender, EventArgs e)
         {
-            string endpointText = comboBox1.Text.ToString();
+            string endpointText = comboBox1.SelectedValue.ToString();
             endpoint.Text = endpointText;
             end2 = endpointText;
             end_show.Text = MapForm.dictPlace[endpointText];

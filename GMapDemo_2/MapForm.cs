@@ -101,6 +101,7 @@ namespace GMapDemo_2
             PointLatLng pointLatLng_S = dict[add.start1];
             PointLatLng pointLatLng_E = dict[add.end2];
             DrawrouteBetweenTowPoint(pointLatLng_S, pointLatLng_E,add.c);
+            add.Dispose();
 
         }
 
