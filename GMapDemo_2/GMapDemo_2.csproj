@@ -83,6 +83,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPoint.Designer.cs">
+      <DependentUpon>addPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addPointRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPointRoute.Designer.cs">
+      <DependentUpon>addPointRoute.cs</DependentUpon>
+    </Compile>
     <Compile Include="MapForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addPoint.resx">
+      <DependentUpon>addPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPointRoute.resx">
+      <DependentUpon>addPointRoute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MapForm.resx">
       <DependentUpon>MapForm.cs</DependentUpon>
     </EmbeddedResource>

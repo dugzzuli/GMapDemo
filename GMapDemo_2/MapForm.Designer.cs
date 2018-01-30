@@ -36,7 +36,9 @@
             this.lngText = new System.Windows.Forms.ToolStripStatusLabel();
             this.GMapMean = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.CreatePoint = new System.Windows.Forms.ToolStripMenuItem();
+            this.新建路线ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapControl = new GMapDemo_2.MapControl();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.statusWin.SuspendLayout();
             this.GMapMean.SuspendLayout();
             this.SuspendLayout();
@@ -48,9 +50,9 @@
             this.latText,
             this.lng,
             this.lngText});
-            this.statusWin.Location = new System.Drawing.Point(0, 373);
+            this.statusWin.Location = new System.Drawing.Point(0, 551);
             this.statusWin.Name = "statusWin";
-            this.statusWin.Size = new System.Drawing.Size(520, 22);
+            this.statusWin.Size = new System.Drawing.Size(883, 22);
             this.statusWin.TabIndex = 1;
             this.statusWin.Text = "statusStrip1";
             // 
@@ -81,16 +83,24 @@
             // GMapMean
             // 
             this.GMapMean.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CreatePoint});
+            this.CreatePoint,
+            this.新建路线ToolStripMenuItem});
             this.GMapMean.Name = "GMapMean";
-            this.GMapMean.Size = new System.Drawing.Size(153, 48);
+            this.GMapMean.Size = new System.Drawing.Size(125, 48);
             // 
             // CreatePoint
             // 
             this.CreatePoint.Name = "CreatePoint";
-            this.CreatePoint.Size = new System.Drawing.Size(152, 22);
+            this.CreatePoint.Size = new System.Drawing.Size(124, 22);
             this.CreatePoint.Text = "新建地点";
             this.CreatePoint.Click += new System.EventHandler(this.CreatePoint_Click);
+            // 
+            // 新建路线ToolStripMenuItem
+            // 
+            this.新建路线ToolStripMenuItem.Name = "新建路线ToolStripMenuItem";
+            this.新建路线ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.新建路线ToolStripMenuItem.Text = "新建路线";
+            this.新建路线ToolStripMenuItem.Click += new System.EventHandler(this.新建路线ToolStripMenuItem_Click);
             // 
             // mapControl
             // 
@@ -116,20 +126,30 @@
             this.mapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.mapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.mapControl.ShowTileGridLines = false;
-            this.mapControl.Size = new System.Drawing.Size(520, 395);
+            this.mapControl.Size = new System.Drawing.Size(883, 573);
             this.mapControl.TabIndex = 0;
             this.mapControl.Zoom = 0D;
             this.mapControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mapControl_MouseMove);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(757, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(126, 551);
+            this.panel1.TabIndex = 2;
             // 
             // MapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 395);
+            this.ClientSize = new System.Drawing.Size(883, 573);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusWin);
             this.Controls.Add(this.mapControl);
             this.Name = "MapForm";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.statusWin.ResumeLayout(false);
             this.statusWin.PerformLayout();
             this.GMapMean.ResumeLayout(false);
@@ -148,6 +168,8 @@
         private System.Windows.Forms.ToolStripStatusLabel lngText;
         private System.Windows.Forms.ContextMenuStrip GMapMean;
         private System.Windows.Forms.ToolStripMenuItem CreatePoint;
+        private System.Windows.Forms.ToolStripMenuItem 新建路线ToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

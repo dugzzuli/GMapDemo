@@ -25,3 +25,30 @@ D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\SharpMapDemo
 D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\SharpMapDemo\obj\Debug\SharpMapDemo.pdb
 D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\SharpMapDemo\bin\Debug\data\states.shp
 D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\SharpMapDemo\bin\Debug\data\cities.shp
+D:\Users\C#\GMapDemo\SharpMapDemo\obj\Debug\SharpMapDemo.exe
+D:\Users\C#\GMapDemo\SharpMapDemo\obj\Debug\SharpMapDemo.pdb
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\data\cities.shp
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\data\states.shp
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMapDemo.exe
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMapDemo.pdb
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\BruTile.Desktop.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\BruTile.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\BruTile.MbTiles.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\BruTile.Serialization.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\Common.Logging.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\GeoAPI.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\NetTopologySuite.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\Newtonsoft.Json.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\PowerCollections.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\ProjNet.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMap.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMap.UI.dll
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\Newtonsoft.Json.xml
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMap.pdb
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMap.xml
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMap.UI.pdb
+D:\Users\C#\GMapDemo\SharpMapDemo\bin\Debug\SharpMap.UI.xml
+D:\Users\C#\GMapDemo\SharpMapDemo\obj\Debug\SharpMapDemo.csprojResolveAssemblyReference.cache
+D:\Users\C#\GMapDemo\SharpMapDemo\obj\Debug\SharpMapDemo.Form1.resources
+D:\Users\C#\GMapDemo\SharpMapDemo\obj\Debug\SharpMapDemo.Properties.Resources.resources
+D:\Users\C#\GMapDemo\SharpMapDemo\obj\Debug\SharpMapDemo.csproj.GenerateResource.Cache

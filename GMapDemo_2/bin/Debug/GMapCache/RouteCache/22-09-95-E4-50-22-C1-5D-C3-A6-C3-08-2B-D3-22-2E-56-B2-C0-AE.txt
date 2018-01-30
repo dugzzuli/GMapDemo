@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <Document>
+    <name>KML Samples</name>
+    <open>1</open>
+    <distance>3.134092</distance>
+    <traveltime>206</traveltime>
+    <description>To enable simple instructions add: 'instructions=1' as parameter to the URL</description>
+    <Folder>
+      <name>Paths</name>
+      <visibility>0</visibility>
+      <description>Examples of paths.</description>
+      <Placemark>
+        <name>Tessellated</name>
+        <visibility>0</visibility>
+        <description><![CDATA[If the <tessellate> tag has a value of 1, the line will contour to the underlying terrain]]></description>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates> 126.651338,45.769097
+126.652357,45.768508
+126.654709,45.767175
+126.654928,45.767052
+126.656807,45.765942
+126.657190,45.765720
+126.659012,45.764688
+126.659369,45.764475
+126.661020,45.762581
+126.661224,45.762416
+126.661429,45.762306
+126.661919,45.762104
+126.662220,45.761857
+126.662183,45.761357
+126.661982,45.758573
+126.662325,45.758489
+126.662483,45.760198
+126.662543,45.760832
+126.662590,45.761338
+126.662594,45.761694
+126.662574,45.761937
+126.662484,45.763000
+126.662419,45.763757
+126.662131,45.767190
+126.662097,45.767579
+126.661923,45.769294
+126.661828,45.770407
+126.661605,45.771126
+126.661236,45.771701
+126.660962,45.771964
+126.660581,45.772265
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

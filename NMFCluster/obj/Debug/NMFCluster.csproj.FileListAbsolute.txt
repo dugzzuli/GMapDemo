@@ -1,0 +1,12 @@
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMFCluster.exe.config
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMFCluster.exe
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMFCluster.pdb
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMF.Collections.dll
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMF.Expressions.dll
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMF.Expressions.Linq.dll
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMF.Models.dll
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMF.Serialization.dll
+D:\Users\C#\GMapDemo\NMFCluster\bin\Debug\NMF.Utilities.dll
+D:\Users\C#\GMapDemo\NMFCluster\obj\Debug\NMFCluster.csprojResolveAssemblyReference.cache
+D:\Users\C#\GMapDemo\NMFCluster\obj\Debug\NMFCluster.exe
+D:\Users\C#\GMapDemo\NMFCluster\obj\Debug\NMFCluster.pdb

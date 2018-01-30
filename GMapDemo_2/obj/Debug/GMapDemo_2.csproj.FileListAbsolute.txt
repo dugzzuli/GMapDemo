@@ -20,3 +20,27 @@ D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\GMapDemo_2\b
 D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\GMapDemo_2\bin\Debug\System.Data.SQLite.xml
 D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.exe
 D:\users\dugking\documents\visual studio 2015\Projects\SharpMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.pdb
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\GMapDemo_2.exe.config
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.exe
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.pdb
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\GMapDemo_2.exe
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\GMapDemo_2.pdb
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\EntityFramework.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\GMap.NET.Core.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\GMap.NET.WindowsForms.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\GMap.NET.WindowsPresentation.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\Newtonsoft.Json.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\System.Data.SQLite.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\EntityFramework.xml
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\Newtonsoft.Json.xml
+D:\Users\C#\GMapDemo\GMapDemo_2\bin\Debug\System.Data.SQLite.xml
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.csprojResolveAssemblyReference.cache
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.MapForm.resources
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.Properties.Resources.resources
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.csproj.GenerateResource.Cache
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.addPointRoute.resources
+D:\Users\C#\GMapDemo\GMapDemo_2\obj\Debug\GMapDemo_2.addPoint.resources
