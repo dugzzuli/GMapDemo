@@ -95,6 +95,10 @@
     <Compile Include="addPointRoute.Designer.cs">
       <DependentUpon>addPointRoute.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomMarkers\GMapMarkerCircle.cs" />
+    <Compile Include="CustomMarkers\GMapMarkerCircle_Small.cs" />
+    <Compile Include="CustomMarkers\GMapMarkerRect.cs" />
+    <Compile Include="CustomMarkers\GMarkerArrow.cs" />
     <Compile Include="GMapMarkerImage.cs" />
     <Compile Include="MapForm.cs">
       <SubType>Form</SubType>

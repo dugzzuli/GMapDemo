@@ -23,5 +23,15 @@ namespace GMapDemo_2
             this.Hide();
 
         }
+
+        private void addPoint_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void placeText_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
     }
 }

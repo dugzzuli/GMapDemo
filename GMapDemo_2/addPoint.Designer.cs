@@ -48,6 +48,7 @@
             this.placeText.Name = "placeText";
             this.placeText.Size = new System.Drawing.Size(100, 21);
             this.placeText.TabIndex = 1;
+            this.placeText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.placeText_KeyDown);
             // 
             // ok
             // 
@@ -70,6 +71,7 @@
             this.Name = "addPoint";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addPoint";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addPoint_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

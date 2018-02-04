@@ -60,6 +60,24 @@ namespace GMapDemo_2
             }
         }
 
+        private void btncolor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               
+                this.Hide();
+            }
+        }
+
+        private void start2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                this.Hide();
+            }
+        }
+
         private void start2_Click(object sender, EventArgs e)
         {
             string endpointText = comboBox1.SelectedValue.ToString();

@@ -129,6 +129,7 @@
             this.start2.Text = "选择";
             this.start2.UseVisualStyleBackColor = true;
             this.start2.Click += new System.EventHandler(this.start2_Click);
+            this.start2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.start2_KeyDown);
             // 
             // label3
             // 
@@ -149,6 +150,7 @@
             this.btncolor.TabIndex = 7;
             this.btncolor.UseVisualStyleBackColor = false;
             this.btncolor.Click += new System.EventHandler(this.btncolor_Click);
+            this.btncolor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btncolor_KeyDown);
             // 
             // start_show
             // 

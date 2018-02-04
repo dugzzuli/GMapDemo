@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GMapDemo_2
@@ -28,6 +29,13 @@ namespace GMapDemo_2
         private GMapPolygon currentPolygon;
 
         private bool isLeftButtonDown = false;
+        GMapMarkerCircle lastCircleMarker;
+        private GMapOverlay tempOverlay = new GMapOverlay("tempOverlay");
+        private GMapOverlay yuanxingOverlay= new GMapOverlay("yuanxingOverlay");
+
+
+        private GMapOverlay guijigOverlay = new GMapOverlay("guijigOverlay");
+
         public MapForm()
         {
             InitializeComponent();
@@ -46,7 +54,7 @@ namespace GMapDemo_2
             mapControl.MapProvider = GMapProviders.OpenStreetMap; //google china 地图
             mapControl.MinZoom = 2;  //最小比例
             mapControl.MaxZoom = 24; //最大比例
-            mapControl.Zoom = 15;     //当前比例
+            mapControl.Zoom = 16;     //当前比例
             mapControl.ShowCenter = false; //不显示中心十字点
             mapControl.DragButton = System.Windows.Forms.MouseButtons.Left; //左键拖拽地图
 
@@ -62,19 +70,58 @@ namespace GMapDemo_2
             this.objects = new GMapOverlay("objects");
             this.mapControl.Overlays.Add(this.objects);
             this.mapControl.Overlays.Add(this.polygons);
+            this.mapControl.Overlays.Add(tempOverlay);
+            this.mapControl.Overlays.Add(yuanxingOverlay);
+            this.mapControl.Overlays.Add(guijigOverlay);
             mapControl.Overlays.Add(markersOverlay);
 
 
         }
 
+   
 
 
+        public static double distanceByMeter(double long1, double lat1, double long2,double lat2)
+        {
+            double a, b, R;
+            R = 6378137; // 地球半径
+            lat1 = lat1 * Math.PI / 180.0;
+            lat2 = lat2 * Math.PI / 180.0;
+            a = lat1 - lat2;
+            b = (long1 - long2) * Math.PI / 180.0;
+            double d;
+            double sa2, sb2;
+            sa2 = Math.Sin(a / 2.0);
+            sb2 = Math.Sin(b / 2.0);
+            d = 2 * R * Math.Asin(Math.Sqrt(sa2 * sa2 + Math.Cos(lat1)
+                            * Math.Cos(lat2) * sb2 * sb2));
+            return d;
+        }
+
+
+
+
+        public PointLatLng lastPosition = new PointLatLng();
         private void mapControl_MouseMove(object sender, MouseEventArgs e)
         {
             var point = MapControl.MousePosition;
 
             latText.Text = e.X.ToString();
             lngText.Text = e.Y.ToString();
+
+            if (drawYuan.Checked&&e.Button == MouseButtons.Left)
+            {
+               
+                lastPosition= mapControl.FromLocalToLatLng(e.X, e.Y);
+                tempOverlay.Markers.Clear(); //擦出掉以前的marker
+
+                //换算成以米为单位的距离
+                int radius = (int)distanceByMeter(lastPosition.Lng,lastPosition.Lat, latLng.Lng,latLng.Lat);
+
+                lastCircleMarker = new GMapMarkerCircle(latLng, radius);
+                lastCircleMarker.Fill = new SolidBrush(Color.FromArgb(50, Color.Red));
+                tempOverlay.Markers.Add(lastCircleMarker);
+            }
         }
 
         private void CreatePoint_Click(object sender, EventArgs e)
@@ -85,7 +132,7 @@ namespace GMapDemo_2
             PointLatLng point = mapControl.FromLocalToLatLng(Convert.ToInt32(latText.Text), Convert.ToInt32(lngText.Text));
 
 
-            
+
 
             GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.green);
             marker.ToolTipText = add.text;
@@ -124,7 +171,7 @@ namespace GMapDemo_2
             add.Dispose();
 
         }
-
+        public GMapRoute rSave =null;
         private void DrawrouteBetweenTowPoint(PointLatLng pointLatLng_S, PointLatLng pointLatLng_E, Color c)
         {
             RoutingProvider rp = mapControl.MapProvider as RoutingProvider;
@@ -138,11 +185,29 @@ namespace GMapDemo_2
                 GMapRoute r = new GMapRoute(route.Points, route.Name);
                 //r.Stroke.Width = 3;                  //路径宽度  
                 r.Stroke.Color = c;          //路径颜色  
+                rSave = r;
 
                 markersOverlay.Routes.Add(r);
+                
 
-                mapControl.ZoomAndCenterRoute(r);
+
+                //mapControl.ZoomAndCenterRoute(r);
             }
+        }
+
+        private void traceRoute(GMapRoute r)
+        {
+            List<PointLatLng> listR = r.Points;
+            GMapMarker gmar = null;
+            listR.ForEach(model =>
+            {
+                double lat = model.Lat;
+                double lng = model.Lng;
+                gmar = new GMarkerGoogle(model, GMarkerGoogleType.arrow);
+              
+                guijigOverlay.Markers.Add(gmar);
+
+            });
         }
 
         private void 保存地图ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -222,7 +287,7 @@ namespace GMapDemo_2
         {
 
         }
-
+        private PointLatLng latLng = new PointLatLng();
         private void mapControl_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
@@ -231,10 +296,11 @@ namespace GMapDemo_2
 
                 if (checkBoxDrawPolygon.Checked)
                 {
+                    mapControl.DragButton = MouseButtons.None;
                     drawingPoints.Add(mapControl.FromLocalToLatLng(e.X, e.Y));
                     if (drawingPolygon == null)
                     {
-                        
+
                         drawingPolygon = new GMapPolygon(drawingPoints, "my polygon");
                         drawingPolygon.Fill = new SolidBrush(Color.FromArgb(50, Color.Red));
                         drawingPolygon.Stroke = new Pen(Color.Blue, 2);
@@ -258,7 +324,9 @@ namespace GMapDemo_2
                 }
                 else if (drawYuan.Checked)
                 {
-                    GMapMarkerCircle
+                    mapControl.DragButton = MouseButtons.None;
+                    latLng = mapControl.FromLocalToLatLng(e.X, e.Y);
+
                 }
             }
         }
@@ -270,6 +338,12 @@ namespace GMapDemo_2
                 polygons.Polygons.Add(drawingPolygon);
                 drawingPolygon = null;
                 drawingPoints.Clear();
+            }
+            else if (drawYuan.Checked)
+            {
+                yuanxingOverlay.Markers.Add(lastCircleMarker);
+                lastCircleMarker = null;
+                tempOverlay.Markers.Clear();
             }
         }
 
@@ -288,6 +362,20 @@ namespace GMapDemo_2
         {
             currentPolygon = item;
             item.Stroke.Color = Color.Red;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            mapControl.DragButton = System.Windows.Forms.MouseButtons.Left; //左键拖拽地图
+            checkBoxDrawPolygon.Checked = false;
+            drawYuan.Checked = false;
+            tempOverlay.Markers.Clear();
+
+        }
+
+        private void mapControl_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
