@@ -360,6 +360,7 @@ namespace GMapDemo_2
 
         private void mapControl_OnPolygonEnter(GMapPolygon item)
         {
+            
             currentPolygon = item;
             item.Stroke.Color = Color.Red;
         }
